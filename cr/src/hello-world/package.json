@@ -3,6 +3,7 @@
       "test": "jest"
     },
     "dependencies": {
+      "@google-cloud/functions-framework": "^3.0.0",
       "@google-cloud/storage": "^6.7.0",
       "axios": "^1.2.0",
       "dotenv": "^16.0.3",
