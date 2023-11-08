@@ -1,4 +1,5 @@
 const fs = require('fs');
+const functions = require('@google-cloud/functions-framework');
 
 exports.helloWorld = function(req, res) {
   try {
@@ -10,3 +11,9 @@ exports.helloWorld = function(req, res) {
     res.send("Error: " + err);
   }
 };
+
+functions.cloudEvent('helloPubSub', cloudEvent => {
+  const base64name = cloudEvent.data.message.data;
+  const name = base64name ? Buffer.from(base64name, 'base64').toString() : 'World';
+  console.log(`Hello, ${name}!`);
+});
