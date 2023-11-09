@@ -1,6 +1,7 @@
 const fs = require('fs');
 const functions = require('@google-cloud/functions-framework');
 
+//teste teste
 exports.helloWorld = function(req, res) {
   try {
     const data = fs.readFileSync('/etc/secrets/' + process.env.CONFIG_FILE, 'utf8');
