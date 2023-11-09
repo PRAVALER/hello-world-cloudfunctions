@@ -3,7 +3,7 @@ const functions = require('@google-cloud/functions-framework');
 
 exports.helloWorld = function(req, res) {
   try {
-    const data = fs.readFileSync('/etc/secrets/function-teste1_secret_teste', 'utf8');
+    const data = fs.readFileSync('/etc/secrets/' + process.env.CONFIG_FILE, 'utf8');
     console.log(data);
     res.send("Hello, World! -> " + data);
   } catch (err) {
