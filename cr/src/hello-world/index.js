@@ -6,7 +6,7 @@ exports.helloWorld = function(req, res) {
   try {
     const data = fs.readFileSync('/etc/secrets/' + process.env.CONFIG_FILE, 'utf8');
     console.log(data);
-    res.send("Hello, World! -> " + data);
+    res.send("Hello, World Teste Versão 1 agora vai! -> " + data);
   } catch (err) {
     console.error(err);
     res.send("Error: " + err);
