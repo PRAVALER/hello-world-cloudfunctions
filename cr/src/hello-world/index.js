@@ -18,3 +18,5 @@ functions.cloudEvent('helloPubSub', cloudEvent => {
   const name = base64name ? Buffer.from(base64name, 'base64').toString() : 'World';
   console.log(`Hello, ${name}!`);
 });
+
+// Karpinski 2024
